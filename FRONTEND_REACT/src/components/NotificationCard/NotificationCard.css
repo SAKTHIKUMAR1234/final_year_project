@@ -1,0 +1,14 @@
+.card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.notify-content{
+    padding:0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:8px 0px;
+height: auto;
+
+}

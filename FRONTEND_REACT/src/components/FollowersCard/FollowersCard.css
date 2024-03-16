@@ -1,0 +1,49 @@
+.coverBox {
+    overflow-y:scroll ;
+    }
+
+.FollowersCard{
+    border-radius: 0.7rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 13px;
+    height: 560px;
+
+}
+
+.follower{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:8px 0px;
+    padding: 1px;
+
+}
+
+.follower>div{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+.follower-username{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+
+.follower-username>span{
+    color: var(--theme_color);
+    font-size: 1rem;
+  }
+
+
+
+

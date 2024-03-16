@@ -1,0 +1,59 @@
+.RightSide{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin:15px 10px;
+   
+}
+
+
+
+.navIcons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.chatpopup{
+    width: fit-content;
+    position: absolute;
+    top: 5%;
+    right: 31%;
+    z-index: 100;
+    
+}
+.chatHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 20px;
+    border-bottom: 2px solid black;
+}
+.chatButton{
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    background-color:rgb(175 179 179);
+    border: none;
+}
+.settingpopup{
+    height: 150px;
+    width: 20%;
+    background-color: rgb(246, 246, 246);
+    position: absolute;
+    top: 0;
+    right: 25%;
+}
+.settinghead{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 20px;
+    border-bottom: 2px solid black;
+
+}
+
+.closeChats{
+    cursor: pointer;
+}
+.closeSetting{
+    cursor: pointer;
+}

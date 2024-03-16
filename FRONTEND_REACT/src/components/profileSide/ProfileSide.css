@@ -1,0 +1,9 @@
+.ProfileSide{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 20px;
+    margin:15px 10px;
+
+}

@@ -1,0 +1,79 @@
+.ProfileCard{
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+    background-color: #1e1e1e;
+    color: rgb(253, 248, 248);
+    font-size: 25px;
+}
+
+.ProfileImages{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.cover-image{
+    width: 100%;
+    height: 470px;
+    object-fit:cover;
+}
+
+
+
+
+
+
+/* Follow Status */
+.followStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  .followStatus > hr {
+    width: 85%;
+    border: 1px solid var(--hrColor);
+  }
+  
+  .followStatus > div {
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .follow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .follow>span{
+    font-size: 17px;
+      color: var(--theme_color);
+  }
+  
+  .follow > span:nth-of-type(2) {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .vl {
+    height: 140%;
+    border-left: 2px solid var(--hrColor);
+
+  }
+
+
+
+ 

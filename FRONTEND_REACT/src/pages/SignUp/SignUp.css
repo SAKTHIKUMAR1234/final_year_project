@@ -1,0 +1,161 @@
+section {
+  display: flex;
+  justify-content: center; /* vertically center */
+  align-items: center; /* horizontallly center */
+  min-height: 100vh;
+  padding: 20px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background: linear-gradient(to right top, #3f3c4b, #000);
+ 
+}
+.container {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  max-width: 1000px;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  transform: skewX(-55deg);
+}
+
+.row100 {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.row100 .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 20px;
+}
+.row100 .col .inputBox input[type="date"] {
+  font-size: 18px;
+}
+
+.row100 .col .inputBox {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.row100 .col .inputBox input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 0 10px;
+  z-index: 1;
+  color: var(--theme_color);
+  resize: none;
+}
+.row100 .col .inputBox .text {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+}
+
+.row100 .col .inputBox input:focus + .text,
+.row100 .col .inputBox input:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+.row100 .col .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 0px;
+  background: #fff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.row100 .col .inputBox input:valid ~ .line {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.row100 .col .inputBox input:focus ~ .line {
+  background: linear-gradient(to right, #3f3c4b, var(--theme_color) 130%);
+  height: 100%;
+  opacity: 1;
+}
+
+/* interest */
+
+/* submit */
+
+.row100 .col input[type="submit"] {
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  outline: none;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+@media (max-width: 450px) {
+  .container .row100 {
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.center{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+

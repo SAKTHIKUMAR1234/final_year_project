@@ -1,0 +1,107 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 100ms ease-out;
+  padding: 5px;
+  cursor: pointer;
+  background: linear-gradient(106.23deg, #6d7869, #46c1d7 100%);
+  color: #000;
+}
+
+.login-button {
+  border: none;
+  padding: 10px 40px;
+  cursor: pointer;
+  outline: none;
+  background: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 30px;
+}
+
+.login-button:hover {
+  letter-spacing: 2px;
+  font-size: 18.5px;
+}
+
+.button:hover {
+  cursor: pointer;
+  /* background: linear-gradient(106.23deg, #6d7869, #46c1d7 100%); */
+  background: var(--theme_color);
+}
+
+.submitButton {
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+}
+
+.ps-button {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 12px;
+  background-color: bisque;
+}
+
+.date-timebutton {
+  width: 80px;
+  height: 40px;
+  margin-left: 86%;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: rgb(167, 253, 253);
+  border-radius: 15px;
+}
+
+.option-button {
+  font-size: 14px;
+  gap: 5px;
+  color: black;
+  background-color: transparent;
+  background: linear-gradient(106.23deg, #787169, #46c1d7 100%);
+}
+
+.logout-button {
+  width: 7rem;
+  height: 2rem;
+  align-self: flex-end;
+}
+
+.interest-button {
+  color: var(--theme_color);
+  background-color: transparent;
+  font-size: 18px;
+  border: none;
+}
+
+.avatar-button {
+  margin-left: 2%;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.follow-button {
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.post {
+  background: none;
+  border: none;
+}
+
+.post-Button {
+  margin: 20px;
+  width: 20%;
+}

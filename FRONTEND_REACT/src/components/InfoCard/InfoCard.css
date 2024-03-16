@@ -1,0 +1,26 @@
+.InfoCard
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.infoHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info span{
+    color: var(--theme_color);
+  }
+
+
+
+
+
+

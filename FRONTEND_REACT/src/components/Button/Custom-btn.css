@@ -1,0 +1,99 @@
+.radio-group {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  top: 8px;
+  }
+  .check-group {
+  margin-top:15px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+  display: none;
+  }
+  
+  .radio-label {
+  position: relative;
+  padding-left: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin:10px 0;
+  }
+  /* checkbox */
+  .check-label {
+  position: relative;
+  padding: 5px 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+  }
+  .radio-label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: background-color 0.3s;
+  }
+  /* checkbox */
+  .check-label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: background-color 0.3s;
+  }
+  input[type="radio"]:checked + label:before,
+  input[type="checkbox"]:checked + label:before {
+  background-color: var(--theme_color);
+  }
+  
+  input[type="radio"]:focus + label,
+  input[type="checkbox"]:focus + label,
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + label {
+  color: var(--theme_color);
+  }
+  
+  /* Neon Style */
+  input[type="radio"] + label:before,
+  input[type="checkbox"] + label:before {
+  box-shadow: 0 0 8px var(--theme_color);
+  
+  }
+  
+  input[type="radio"]:checked + label:before,
+  input[type="checkbox"]:checked + label:before {
+  box-shadow: 0 0 8px var(--theme_color), 0 0 16px var(--theme_color),
+  0 0 24px var(--theme_color);
+  }
+  
+  input[type="radio"]:hover + label:before,
+  input[type="radio"]:focus + label:before,
+  input[type="checkbox"]:hover + label:before,
+  input[type="checkbox"]:focus + label:before {
+  background-color: var(--theme_color);
+  }
+  
+  @media (max-width: 480px) {
+  .card {
+  width: 90%;
+  }
+  }
+ 
+ 

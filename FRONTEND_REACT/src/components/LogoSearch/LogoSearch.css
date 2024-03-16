@@ -1,0 +1,35 @@
+.LogoSearch{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+   }
+   .logo-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .Search{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--inputColor);
+    border-radius: 10px;
+    position: relative;
+    margin: 5px;
+   }
+   
+   .search-bar{
+    width: 100%;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+    border-radius: 15px;
+   
+   }
