@@ -53,7 +53,6 @@ public class ConnectionRepoImpl implements ConnectionRepoService {
     @Transactional
     @Override
     public String removeFollowRequest(ConnectionDTO connectionDTO) {
-        System.out.println(connectionDTO);
         connectionRepo.deleteConnectiondetailsBySenderUserIdAndReceiverUserId(connectionDTO.getSender().getUserId(), connectionDTO.getReceiver().getUserId());
         return "Unfollowed Successfully!!!";
     }

@@ -51,7 +51,7 @@ const FollowersCard = () => {
             <div className="follower follow-container" id={recommended.userId}>
               <div>
                 <img
-                  src={"http://localhost:8080/images/userprofile.png" }
+                  src={"http://localhost:8080/images/"+(recommended.userProfile? recommended.userProfile : "user.png") }
                   alt="alt-text"
                   className="profile-image"
                 />

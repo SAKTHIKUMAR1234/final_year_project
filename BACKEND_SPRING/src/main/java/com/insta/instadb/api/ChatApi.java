@@ -11,7 +11,7 @@ public interface ChatApi {
     @PostMapping("/addChat")
     ResponseEntity<?> addMessage(@RequestBody Chats chats);
 
-    @GetMapping("/getChats")
+    @PostMapping ("/getChats")
     ResponseEntity<?> getUserChats(@RequestBody UserChatDTO chatDTO);
 
     @GetMapping("/getChatList/{userId}")

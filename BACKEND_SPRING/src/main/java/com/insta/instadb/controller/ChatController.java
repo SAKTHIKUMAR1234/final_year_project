@@ -23,12 +23,12 @@ public class ChatController implements ChatApi {
 
     @Override
     public ResponseEntity<?> addMessage(Chats chats) {
-        System.out.println(chats);
         return chatService.saveChat(chats);
     }
 
     @Override
     public ResponseEntity<?> getUserChatList(Long userId) {
+        System.out.println(userId);
         return chatListService.getChatList(userId);
     }
 

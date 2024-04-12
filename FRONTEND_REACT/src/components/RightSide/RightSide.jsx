@@ -8,6 +8,8 @@ import { Button } from "../Button/Button";
 import SettingsModal from "../SettingsModal.jsx/SettingsModal";
 import RequestsCard from "../RequestsCard/RequestsCard";
 import NotificationCard from "../NotificationCard/NotificationCard";
+import FollowersCard from "../FollowersCard/FollowersCard";
+import CourseRecommendation from "../CourseRecommendationCard/CourseRecommendation";
 
 const RightSide = () => {
   const user_data = useSelector((state) => {
@@ -68,14 +70,17 @@ const RightSide = () => {
       <div></div>
 
       <RequestsCard />
+      {/* <FollowersCard/>
+       */}
+      <CourseRecommendation/>
 
-      <Button
+      {/* <Button
         text="Share a post..."
         className="button r-button"
         onClick={() => setShareModal(true)}
-      />
+      /> */}
 
-      <ShareModal modalOpened={shareModal} setModalOpened={setShareModal} />
+      {/* <ShareModal modalOpened={shareModal} setModalOpened={setShareModal} /> */}
     </div>
   );
 };

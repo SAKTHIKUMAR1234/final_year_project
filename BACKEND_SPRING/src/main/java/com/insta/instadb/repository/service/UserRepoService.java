@@ -21,4 +21,6 @@ public interface UserRepoService {
     void deleteUser(Long userId);
 
     List<User> findByUserName(String username);
+
+    List<User> findAllUsers();
 }

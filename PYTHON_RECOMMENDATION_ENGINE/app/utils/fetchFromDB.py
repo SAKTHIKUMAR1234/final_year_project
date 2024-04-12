@@ -3,10 +3,10 @@ import psycopg2
 def getAllUsers():
     try:
         conn = psycopg2.connect(
-            dbname='final-year-project',
+            dbname='D1',
             user='postgres',
-            password='password',
-            host='final-year-project.czyss0ok6nfm.us-east-1.rds.amazonaws.com'
+            password='123ajmal',
+            host='localhost'
         )
         print("Database connection established successfully.")
         arr=[]

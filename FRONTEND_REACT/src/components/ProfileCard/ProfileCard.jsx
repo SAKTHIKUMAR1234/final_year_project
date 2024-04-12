@@ -19,9 +19,9 @@ const ProfileCard = () => {
   return (
     <div className="ProfileCard ">
       <div className="ProfileImages">
-        <img src="http://localhost:8080/default_cover.jpg" alt="alt-image" className="cover-image" />
+        <img src="http://localhost:8080/images/default_cover.jpg" alt="alt-image" className="cover-image" />
       
-        <img src={"http://localhost:8080/" + user_data.userProfile || "user.png"} alt="alt-image" className="profile-image-big" />
+        <img src={"http://localhost:8080/images/" + (user_data.userProfile? user_data.userProfile : "user.png")} alt="alt-image" className="profile-image-big" />
       </div>
 
     
@@ -42,11 +42,11 @@ const ProfileCard = () => {
 
           {/* {ProfilePage && (
             <> */}
-              <div className="vl"></div>
-              <div className="follow">
+              {/* <div className="vl"></div> */}
+              {/* <div className="follow">
                 <span>{postCount}</span>
                 <span>Posts</span>
-              </div>
+              </div> */}
             {/* </>
           )} */}
         </div>

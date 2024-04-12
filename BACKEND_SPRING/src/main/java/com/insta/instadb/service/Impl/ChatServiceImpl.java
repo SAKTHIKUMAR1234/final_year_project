@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -36,7 +37,12 @@ public class ChatServiceImpl implements ChatService {
         for (Chats chats : chatsList) {
             chatsMap.put(chats.getId(), chats);
         }
-        return new ResponseEntity<>(chatsMap, HttpStatus.OK);
+        List<Chats> chatsEntryList = new ArrayList<>();
+
+        for(Long i : chatsMap.keySet()){
+            chatsEntryList.add(chatsMap.get(i));
+        }
+        return new ResponseEntity<>(chatsEntryList, HttpStatus.OK);
     }
 
 

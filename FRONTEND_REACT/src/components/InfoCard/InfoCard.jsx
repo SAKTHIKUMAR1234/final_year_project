@@ -25,7 +25,7 @@ const InfoCard = () => {
       <div className="infoHead ">
         <h3>Your Info</h3>
         <div>
-          <Button className="button option-button" icon={<GrEdit size={25} onClick={() => setModalOpened(true)} />} />
+          {/* <Button className="button option-button" icon={<GrEdit size={25} onClick={() => setModalOpened(true)} />} /> */}
           
           <ProfileModal
             old_data={user_data}

@@ -48,5 +48,10 @@ public class UserRepoImpl implements UserRepoService {
         return userRepo.findUsersByUserNameContainingIgnoreCase(username);
     }
 
+    @Override
+    public List<User> findAllUsers() {
+        return userRepo.findAll();
+    }
+
 
 }

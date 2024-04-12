@@ -40,7 +40,11 @@ public class MediaController implements MediaApi {
 
     @Override
     public ResponseEntity<?> addInterest(String interests) {
-        System.out.println(interests);
         return mediaService.addInterests(interests);
+    }
+
+    @Override
+    public ResponseEntity<?> getIsInterestExist() {
+        return mediaService.getInterestCount();
     }
 }

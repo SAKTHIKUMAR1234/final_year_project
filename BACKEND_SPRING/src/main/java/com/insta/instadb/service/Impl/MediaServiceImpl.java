@@ -2,6 +2,7 @@ package com.insta.instadb.service.Impl;
 
 import com.insta.instadb.dto.MediaDTO;
 import com.insta.instadb.entity.*;
+import com.insta.instadb.repository.InterestRepo;
 import com.insta.instadb.repository.service.InterestRepoService;
 import com.insta.instadb.repository.service.MediaRepoService;
 import com.insta.instadb.service.*;
@@ -24,8 +25,8 @@ import java.util.Optional;
 @Service
 public class MediaServiceImpl implements MediaService {
 
-    String IMG_FOLDER_PATH = "/home/divum/IdeaProjects/InstaDB/src/main/resources/static/images/";
-    String VID_FOLDER_PATH = "/home/divum/IdeaProjects/InstaDB/src/main/resources/static/images/";
+    String IMG_FOLDER_PATH = "src/main/resources/static/images";
+    String VID_FOLDER_PATH = "src/main/resources/static/images";
     @Autowired
     private MediaRepoService mediaRepoService;
     @Autowired
@@ -38,6 +39,8 @@ public class MediaServiceImpl implements MediaService {
     private ConnectionService connectionService;
     @Autowired
     private NotificationService notificationService;
+    @Autowired
+    private InterestRepo interestRepo;
 
     @Override
     public ResponseEntity<?> saveMedia(MultipartFile file, Long userId, List<String> interests, String description, String scheduledTime) throws IOException, ParseException {
@@ -112,5 +115,13 @@ public class MediaServiceImpl implements MediaService {
     @Override
     public Optional<Media> getMediaById(Long id) {
         return mediaRepoService.findMediaById(id);
+    }
+
+    @Override
+    public ResponseEntity<?> getInterestCount() {
+        if(interestRepo.findAll().size() >= 38){
+            return new ResponseEntity<>("", HttpStatus.OK);
+        }
+        return new ResponseEntity<>("", HttpStatus.CONFLICT);
     }
 }

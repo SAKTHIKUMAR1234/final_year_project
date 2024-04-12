@@ -13,9 +13,9 @@ const LogoSearch = () => {
  
  <div className="Search">
  
- <input type="text" name="search" className='search-bar' placeholder='#Explore' />
+ {/* <input type="text" name="search" className='search-bar' placeholder='#Explore' />
  
- <Button className={"option-button button"} icon={ <GrSearch size={25}/>}/>
+ <Button className={"option-button button"} icon={ <GrSearch size={25}/>}/> */}
  
  </div>
 

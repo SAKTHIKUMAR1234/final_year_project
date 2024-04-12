@@ -21,4 +21,6 @@ public interface MediaService {
     ResponseEntity<?> getCount(Long userId);
 
     Optional<Media> getMediaById(Long id);
+
+    ResponseEntity<?> getInterestCount();
 }

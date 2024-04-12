@@ -37,4 +37,7 @@ public interface UserApi {
 
     @GetMapping("/forgotPassword/{email}")
     ResponseEntity<?> getResetLink(@PathVariable String email);
+
+    @GetMapping("/check/userExist")
+    ResponseEntity<?> checkoutDB();
 }

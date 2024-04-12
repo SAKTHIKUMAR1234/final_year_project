@@ -23,7 +23,10 @@ public interface MediaApi {
     @GetMapping("/getMediaCount/{userId}")
     ResponseEntity<?> getMediaCount(@PathVariable Long userId);
 
-    @PostMapping("/addInterest/{interests}")
+    @GetMapping("/addInterest/{interests}")
     ResponseEntity<?> addInterest(@PathVariable String interests);
+
+    @GetMapping("interest/isInterestExist")
+    ResponseEntity<?> getIsInterestExist();
 
 }

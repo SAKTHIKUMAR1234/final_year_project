@@ -13,12 +13,9 @@ import com.insta.instadb.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -41,8 +38,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Autowired
     private JwtService jwtService;
 
-    @Autowired
-    private JavaMailSender mailSender;
 
     @Override
     public ResponseEntity<?> saveNewUser(User user) {
@@ -144,6 +139,15 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         if (userList.isEmpty())
             return new ResponseEntity<>("No users found at this Username", HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(userList, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<?> checkDbIsNull() {
+        List<User> userList = userRepoService.findAllUsers();
+        if(userList.isEmpty()){
+            return new ResponseEntity<>("",HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>("", HttpStatus.OK);
     }
 
 

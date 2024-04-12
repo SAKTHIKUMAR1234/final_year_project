@@ -93,6 +93,7 @@ const Chats = ({ chatpop, setChatPopup }) => {
     const startPolling = () => {
       fetchMessages();
       intervalId = setInterval(() => {
+        // console.log("POLLED")
         fetchMessages();
       }, 5000);
     };

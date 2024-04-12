@@ -7,7 +7,7 @@ const PostSide = () => {
   return (
     <div className="PostSide card-container ">
       <ProfileCard />
-      <Posts />
+      {/* <Posts /> */}
     </div>
   );
 };

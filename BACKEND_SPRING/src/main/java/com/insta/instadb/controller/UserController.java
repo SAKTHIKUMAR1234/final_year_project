@@ -67,4 +67,9 @@ public class UserController implements UserApi {
     public ResponseEntity<?> getResetLink(String email) {
         return null;
     }
+
+    @Override
+    public ResponseEntity<?> checkoutDB() {
+        return userService.checkDbIsNull();
+    }
 }

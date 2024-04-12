@@ -19,6 +19,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -38,8 +43,9 @@ public class SecurityConfig {
     // Configuring HttpSecurity
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.cors().and().csrf().disable()
-                .authorizeHttpRequests().requestMatchers("/api/v1/userdetails/newUser", "/api/v1/userdetails/loginAuth", "/api/v1/userdetails/isUser/*", "/images/*", "/videos/*","/api/v1/media/addInterest/**").permitAll().
+        return http.cors(cors -> cors.configurationSource(configurationSource()))
+                .csrf().disable()
+                .authorizeHttpRequests().requestMatchers("/api/v1/userdetails/newUser","/api/v1/userdetails/check/userExist", "/api/v1/userdetails/loginAuth", "/api/v1/userdetails/isUser/*", "/images/*", "/videos/*","/api/v1/media/addInterest/**").permitAll().
                 requestMatchers("/api/v1/message/**", "/api/v1/comments/**",
                         "/api/v1/request/**", "/api/v1/likes/*", "/api/v1/media/**",
                         "/api/v1/notifyUser/**", "/api/v1/userRecommend/**",
@@ -50,6 +56,17 @@ public class SecurityConfig {
                 .and().authenticationProvider(authenticationProvider())
                 .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
+    }
+
+    private CorsConfigurationSource configurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(List.of("http://localhost:3000","http://localhost:5005"));
+        configuration.addAllowedHeader("*");
+        configuration.setAllowedMethods(List.of("GET","POST","PUT","DELETE"));
+        configuration.setAllowCredentials(true);
+        UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
+        urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", configuration);
+        return urlBasedCorsConfigurationSource;
     }
 
     // Password Encoding
