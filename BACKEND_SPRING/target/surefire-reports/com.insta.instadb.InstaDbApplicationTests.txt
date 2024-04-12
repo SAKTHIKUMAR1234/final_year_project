@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.insta.instadb.InstaDbApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.969 s - in com.insta.instadb.InstaDbApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.53 s - in com.insta.instadb.InstaDbApplicationTests
